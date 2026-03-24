@@ -1,0 +1,39 @@
+{
+	"formspreeEndpoint": "https://formspree.io/f",
+	"forms": [
+		{
+			"id": "bible-study",
+			"formId": "YOUR_FORM_ID_1",
+			"title": "Request a Bible Study",
+			"description": "Interested in studying the Bible? We'd love to meet with you for a personal or group Bible study at a time and place that works for you.",
+			"subject": "[BCOC] Bible Study Request",
+			"icon": "📖",
+			"submitLabel": "Request Bible Study"
+		},
+		{
+			"id": "personal-visit",
+			"formId": "YOUR_FORM_ID_2",
+			"title": "Request a Personal Visit",
+			"description": "We'd be happy to visit with you. Whether you have questions about faith, need encouragement, or just want to connect, we're here for you.",
+			"subject": "[BCOC] Personal Visit Request",
+			"icon": "🤝",
+			"submitLabel": "Request a Visit"
+		},
+		{
+			"id": "more-info",
+			"formId": "YOUR_FORM_ID_3",
+			"title": "Request More Information",
+			"description": "Have questions about our church, services, or beliefs? Fill out this form and we'll get back to you promptly.",
+			"subject": "[BCOC] Information Inquiry",
+			"icon": "ℹ️",
+			"submitLabel": "Send Inquiry"
+		}
+	],
+	"fields": [
+		{ "name": "name", "label": "Full Name", "type": "text", "required": true, "placeholder": "Your name" },
+		{ "name": "email", "label": "Email Address", "type": "email", "required": true, "placeholder": "your@email.com" },
+		{ "name": "phone", "label": "Cell Phone", "type": "tel", "required": false, "placeholder": "(970) 123-1234" },
+		{ "name": "address", "label": "Address", "type": "textarea", "required": false, "placeholder": "Street, City, State, ZIP (optional)" },
+		{ "name": "message", "label": "Message / Notes", "type": "textarea", "required": false, "placeholder": "Any additional details..." }
+	]
+}

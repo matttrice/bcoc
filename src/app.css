@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes: nord --default, dark --prefersdark;
+}
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.prose ul ul {
+  list-style-type: circle;
+}

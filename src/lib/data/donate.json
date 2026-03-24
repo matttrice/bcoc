@@ -1,0 +1,44 @@
+{
+	"intro": "Your generous contributions support our mission to spread God's word and serve the Berthoud community. Every gift makes a difference.",
+	"methods": [
+		{
+			"id": "zelle",
+			"name": "Zelle",
+			"icon": "💳",
+			"badge": "No Fees",
+			"description": "Send a Zelle payment using your bank or Zelle account. This is our preferred method because 100% of your donation goes directly to the church with no processing fees.",
+			"details": {
+				"email": "berthoudcoc@gmail.com",
+				"phone": "970-699-9500"
+			},
+			"note": "The Zelle recipient name will simply say \"Berthoud\" because that is the first name of \"Berthoud Church of Christ\".",
+			"qrCode": "/qr/zelle-qr.jpg"
+		},
+		{
+			"id": "paypal",
+			"name": "PayPal / Venmo / Card",
+			"icon": "🌐",
+			"badge": null,
+			"description": "Donate using PayPal, Venmo, or any credit/debit card through our secure PayPal donation page.",
+			"details": {
+				"donateUrl": "https://www.paypal.com/donate/?hosted_button_id=B4Q7Q8DHDUYMW",
+				"hostedButtonId": "B4Q7Q8DHDUYMW"
+			},
+			"note": null,
+			"qrCode": "/qr/paypal-qr.png"
+		},
+		{
+			"id": "check",
+			"name": "Check / Money Order",
+			"icon": "✉️",
+			"badge": null,
+			"description": "Mail a check or money order to support the church.",
+			"details": {
+				"payableTo": "Berthoud Church of Christ",
+				"mailingAddress": "PO Box 659, Berthoud, CO 80513"
+			},
+			"note": null,
+			"qrCode": null
+		}
+	]
+}

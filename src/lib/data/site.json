@@ -1,0 +1,38 @@
+{
+	"name": "Berthoud Church of Christ",
+	"shortName": "BCOC",
+	"tagline": "Romans 16:16 \"All the churches of Christ greet you.\"",
+	"description": "Church of Christ in Berthoud, Colorado",
+	"phone": "970-699-9500",
+	"email": "berthoudcoc@gmail.com",
+	"emailSecondary": "berthoudcoc@gmail.com",
+	"mailingAddress": {
+		"street": "PO Box 659",
+		"city": "Berthoud",
+		"state": "CO",
+		"zip": "80513"
+	},
+	"domains": [
+		"www.berthoudcoc.org",
+		"www.berthoudchristians.org"
+	],
+	"services": [
+		{
+			"day": "Sunday",
+			"name": "Sunday Worship",
+			"time": "10:00 AM",
+			"description": "Join us for worship, prayer, and Bible study"
+		},
+		{
+			"day": "As Requested",
+			"name": "Master Bible Study",
+			"time": "6:00 PM",
+			"description": "In-depth Bible study and fellowship"
+		}
+	],
+	"links": {
+		"mbs": "https://masterbiblestudy.com",
+		"googleMaps": "https://maps.google.com/?q=Berthoud+Church+of+Christ+Berthoud+CO"
+	},
+	"socialMedia": {}
+}

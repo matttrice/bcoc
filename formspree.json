@@ -1,0 +1,54 @@
+{
+  "forms": {
+    "bible-study": {
+      "name": "Request a Bible Study",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "phone": { "type": "text" },
+        "address": { "type": "textarea" },
+        "message": { "type": "textarea" }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "berthoudcoc@gmail.com"
+        }
+      ]
+    },
+
+    "personal-visit": {
+      "name": "Request a Personal Visit",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "phone": { "type": "text" },
+        "address": { "type": "textarea" },
+        "message": { "type": "textarea" }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "berthoudcoc@gmail.com"
+        }
+      ]
+    },
+
+    "more-info": {
+      "name": "Request More Information",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "phone": { "type": "text" },
+        "address": { "type": "textarea" },
+        "message": { "type": "textarea" }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "berthoudcoc@gmail.com"
+        }
+      ]
+    }
+  }
+}
