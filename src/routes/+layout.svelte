@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="{base}/logo_sm.png" />
+	<link rel="icon" href={asset('/logo_sm.png')} />
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">

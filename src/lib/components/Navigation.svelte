@@ -1,102 +1,96 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import site from '$lib/data/site.json';
 
 	let mobileMenuOpen = $state(false);
 
 	const navLinks = [
-		{ href: `${base}/`, label: 'Home' },
-		{ href: `${base}/about`, label: 'About' },
-		{ href: `${base}/donate`, label: 'Donate' },
-		{ href: `${base}/contact`, label: 'Contact' }
-	];
+		{ path: '/', label: 'Home' },
+		{ path: '/about/', label: 'About' },
+		{ path: '/donate/', label: 'Donate' },
+		{ path: '/contact/', label: 'Contact' },
+		{ path: '/mbs/', label: 'Bible Study' }
+	] as const;
 
-	function isActive(href: string) {
-		if (href === `${base}/`) return page.url.pathname === `${base}/` || page.url.pathname === base;
-		return page.url.pathname.startsWith(href);
+	type NavLinkPath = (typeof navLinks)[number]['path'];
+
+	function normalizePath(path: NavLinkPath) {
+		return path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
+	}
+
+	function isActive(path: NavLinkPath) {
+		const currentRouteId = page.route.id ?? '';
+		const normalizedPath = normalizePath(path);
+
+		if (normalizedPath === '/') {
+			return currentRouteId === '/';
+		}
+
+		return currentRouteId === normalizedPath || currentRouteId.startsWith(`${normalizedPath}/`);
+	}
+
+	function closeMobileMenu() {
+		mobileMenuOpen = false;
 	}
 </script>
 
-<div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
-	<div class="navbar-start">
-		<div class="dropdown">
-			<button 
-				type="button" 
-				class="btn btn-ghost lg:hidden" 
-				onclick={() => mobileMenuOpen = !mobileMenuOpen}
-				onkeydown={(e) => e.key === 'Enter' && (mobileMenuOpen = !mobileMenuOpen)}
-				aria-label="Toggle menu" 
-				aria-expanded={mobileMenuOpen}>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-				</svg>
-			</button>
 
-			{#if mobileMenuOpen}
-				<ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg">
-					{#each navLinks as link (link.href)}
-						<li>
-							<a 
-								href={link.href} 
-								class:active={isActive(link.href)}
-								onclick={() => mobileMenuOpen = false}
-							>
-								{link.label}
-							</a>
-						</li>
-					{/each}
-					<li>
-						<a 
-							href={site.links.mbs} 
-							target="_blank" 
-							rel="noopener noreferrer"
-							onclick={() => mobileMenuOpen = false}
-						>
-							📖 Master Bible Study
-						</a>
-					</li>
-				</ul>
-			{/if}
-		</div>
-
-		<!-- Logo + Name - Much Larger -->
-		<a href="{base}/" class="btn btn-ghost gap-3 px-2">
-			<img src="{base}/logo_sm.png" alt="{site.name} logo" class="h-9 w-9 rounded-full" />
-			<span class="text-2xl font-bold hidden sm:inline tracking-tight">
-				{site.shortName}
+<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+	<div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-1.5 sm:px-6">
+		<a href={resolve('/')} class="flex items-center gap-3 rounded-xl px-0.5 py-0 transition hover:bg-slate-100 sm:min-w-[21.5rem] lg:min-w-[25rem]" aria-label="Go to homepage">
+			<img src={asset('/logo_sm.png')} alt="Berthoud Church of Christ logo" class="h-[4.75rem] w-[4.75rem] object-contain sm:h-[5.25rem] sm:w-[5.25rem]" />
+			<span class="hidden sm:block leading-none">
+				<span class="church-wordmark block text-[22px] font-semibold tracking-[0.16em] text-slate-900">BERTHOUD</span>
+				<span class="church-wordmark mt-0.5 block text-[14px] tracking-[0.2em] text-slate-700">CHURCH OF CHRIST</span>
 			</span>
 		</a>
+
+		<nav class="hidden items-center gap-0.5 lg:flex">
+			{#each navLinks as link (link.path)}
+				<a
+					href={resolve(link.path)}
+					class={`rounded-lg px-2.5 py-1.5 text-[0.95rem] font-semibold transition ${
+						isActive(link.path)
+							? 'bg-blue-50 text-blue-800'
+							: 'text-slate-700 hover:bg-slate-100'
+					}`}
+				>
+					{link.label}
+				</a>
+			{/each}
+		</nav>
+
+		<button
+			type="button"
+			class="inline-flex items-center rounded-lg border border-slate-300 p-2 text-slate-700 transition hover:bg-slate-100 lg:hidden"
+			onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
+			onkeydown={(e) => e.key === 'Enter' && (mobileMenuOpen = !mobileMenuOpen)}
+			aria-label="Toggle menu"
+			aria-expanded={mobileMenuOpen}
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</button>
 	</div>
 
-	<!-- Desktop Navigation - Larger Text -->
-	<div class="navbar-center hidden lg:flex">
-		<ul class="menu menu-horizontal px-1 gap-2 text-lg">   <!-- text-lg makes desktop links bigger -->
-			{#each navLinks as link (link.href)}
-				<li>
-					<a 
-						href={link.href} 
-						class:active={isActive(link.href)}
-						class="px-4 py-2 font-medium"
+	{#if mobileMenuOpen}
+		<div class="border-t border-slate-200 bg-white px-4 py-3 lg:hidden sm:px-6">
+			<nav class="flex flex-col gap-1">
+				{#each navLinks as link (link.path)}
+					<a
+						href={resolve(link.path)}
+						onclick={closeMobileMenu}
+						class={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
+							isActive(link.path)
+								? 'bg-blue-50 text-blue-800'
+								: 'text-slate-700 hover:bg-slate-100'
+						}`}
 					>
 						{link.label}
 					</a>
-				</li>
-			{/each}
-			<li>
-				<a 
-					href={site.links.mbs} 
-					target="_blank" 
-					rel="noopener noreferrer"
-					class="px-4 py-2 font-medium"
-				>
-					📖 Master Bible Study
-				</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="navbar-end">
-		<a href="{base}/contact" class="btn btn-primary">Get In Touch</a>
-	</div>
-</div>
+				{/each}
+			</nav>
+		</div>
+	{/if}
+</header>

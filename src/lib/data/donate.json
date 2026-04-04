@@ -39,6 +39,20 @@
 			},
 			"note": null,
 			"qrCode": null
+		},
+		{
+			"id": "securities",
+			"name": "Give Securities",
+			"icon": "📈",
+			"badge": null,
+			"description": "Give stocks, bonds, mutual funds, ETFs, or other property by transfer to our Schwab account.",
+			"details": {
+				"schwabAccountNumber": "[PLACEHOLDER: Schwab account number]",
+				"schwabDtcNumber": "[PLACEHOLDER: Schwab DTC number]",
+				"einNumber": "[PLACEHOLDER: EIN number]"
+			},
+			"note": "Long-term appreciated assets may allow a more tax-efficient gift. Please consult your tax adviser for your personal situation.",
+			"qrCode": null
 		}
 	]
 }

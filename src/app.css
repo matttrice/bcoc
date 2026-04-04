@@ -1,12 +1,108 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@plugin "daisyui" {
-	themes: nord --default, dark --prefersdark;
+
+:root {
+  --bcoc-bg: #f8f6f2;
+  --bcoc-surface: #ffffff;
+  --bcoc-surface-soft: #f1f5f9;
+  --bcoc-ink: #0f172a;
+  --bcoc-muted: #334155;
+  --bcoc-primary-50: #eff6ff;
+  --bcoc-primary-100: #dbeafe;
+  --bcoc-primary-200: #bfdbfe;
+  --bcoc-primary: #60a5fa;
+  --bcoc-primary-hover: #3b82f6;
+  --bcoc-primary-strong: #1d4ed8;
+  --bcoc-primary-ink: #0b254a;
+  --bcoc-accent: #0f766e;
 }
-.prose ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bcoc-bg);
 }
-.prose ul ul {
-  list-style-type: circle;
+
+body {
+  margin: 0;
+  color: var(--bcoc-ink);
+  background-image: linear-gradient(to bottom, #f8fafc 0%, #eef4ff 42%, #eef7f3 100%);
+  font-family: "Source Sans Pro", "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.church-wordmark {
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-slate-200 shadow-sm backdrop-blur;
+    background-color: color-mix(in srgb, var(--bcoc-surface) 90%, transparent);
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    background-color: var(--bcoc-primary);
+    color: var(--bcoc-primary-ink);
+    box-shadow: 0 2px 8px rgba(2, 6, 23, 0.1);
+  }
+
+  .primary-button:hover {
+    background-color: var(--bcoc-primary-hover);
+    color: #f8fafc;
+  }
+
+  .primary-button:focus-visible {
+    outline-color: var(--bcoc-primary-strong);
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    border-color: #cbd5e1;
+    background-color: var(--bcoc-surface);
+    color: var(--bcoc-ink);
+  }
+
+  .secondary-button:hover {
+    border-color: #94a3b8;
+    background-color: var(--bcoc-surface-soft);
+  }
+
+  .secondary-button:focus-visible {
+    outline-color: #94a3b8;
+  }
+
+  .chip-link {
+    @apply inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium transition;
+    border-color: var(--bcoc-primary-200);
+    background-color: var(--bcoc-primary-50);
+    color: #1e3a8a;
+  }
+
+  .chip-link:hover {
+    border-color: var(--bcoc-primary);
+    background-color: var(--bcoc-primary-100);
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm transition focus:outline-none focus:ring-2;
+    border-color: #cbd5e1;
+  }
+
+  .input-field:focus {
+    border-color: var(--bcoc-primary-hover);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.35);
+  }
+
+  .textarea-field {
+    @apply w-full min-h-28 rounded-xl border bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm transition focus:outline-none focus:ring-2;
+    border-color: #cbd5e1;
+  }
+
+  .textarea-field:focus {
+    border-color: var(--bcoc-primary-hover);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.35);
+  }
 }

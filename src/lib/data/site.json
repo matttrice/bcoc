@@ -2,10 +2,16 @@
 	"name": "Berthoud Church of Christ",
 	"shortName": "BCOC",
 	"tagline": "Romans 16:16 \"All the churches of Christ greet you.\"",
-	"description": "Church of Christ in Berthoud, Colorado",
+	"description": "A welcoming congregation in Berthoud, Colorado.",
 	"phone": "970-699-9500",
 	"email": "berthoudcoc@gmail.com",
 	"emailSecondary": "berthoudcoc@gmail.com",
+	"physicalAddress": {
+		"street": "730 6th St",
+		"city": "Berthoud",
+		"state": "CO",
+		"zip": "80513"
+	},
 	"mailingAddress": {
 		"street": "PO Box 659",
 		"city": "Berthoud",
@@ -24,15 +30,21 @@
 			"description": "Join us for worship, prayer, and Bible study"
 		},
 		{
-			"day": "As Requested",
-			"name": "Master Bible Study",
-			"time": "6:00 PM",
-			"description": "In-depth Bible study and fellowship"
+			"day": "Wednesday",
+			"name": "Midweek Bible Study",
+			"time": "7:00 PM",
+			"description": "Encouraging study and fellowship in God's word"
+		},
+		{
+			"day": "By Request",
+			"name": "Personal Bible Study",
+			"time": "Flexible",
+			"description": "Meet with a teacher at a time and place that works for you"
 		}
 	],
 	"links": {
 		"mbs": "https://masterbiblestudy.com",
-		"googleMaps": "https://maps.google.com/?q=Berthoud+Church+of+Christ+Berthoud+CO"
+		"googleMaps": "https://www.google.com/maps/dir/?api=1&destination=730+6th+St+Berthoud+CO+80513"
 	},
 	"socialMedia": {}
 }

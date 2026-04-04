@@ -11,10 +11,3 @@ declare global {
 }
 
 export {};
-
-// Type declarations for mdsvex markdown imports
-declare module '*.md' {
-	import type { Component } from 'svelte';
-	const component: Component;
-	export default component;
-}
