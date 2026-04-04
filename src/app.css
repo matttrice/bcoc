@@ -14,11 +14,25 @@
   --bcoc-primary-strong: #1d4ed8;
   --bcoc-primary-ink: #0b254a;
   --bcoc-accent: #0f766e;
+  --bcoc-anchor-offset-mobile: 6.25rem;
+  --bcoc-anchor-offset-desktop: 6rem;
+  --bcoc-anchor-offset: var(--bcoc-anchor-offset-mobile);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --bcoc-anchor-offset: var(--bcoc-anchor-offset-desktop);
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--bcoc-anchor-offset);
   background-color: var(--bcoc-bg);
+}
+
+:target {
+  scroll-margin-top: var(--bcoc-anchor-offset);
 }
 
 body {

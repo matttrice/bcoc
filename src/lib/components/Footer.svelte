@@ -33,7 +33,7 @@
 			<h2 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-200">Resources</h2>
 			<div class="mt-4 space-y-2 text-sm text-slate-300">
 				<a href={resolve('/contact/#bible-study')} class="block hover:text-blue-200">Request Bible Study</a>
-				<a href={site.links.mbs} target="_blank" rel="noopener noreferrer" class="block hover:text-blue-200">Master Bible Study</a>
+				<a href={resolve('/mbs/')} class="block hover:text-blue-200">Master Bible Study</a>
 				<a href={resolve('/donate/')} class="block hover:text-blue-200">Donate</a>
 				<a href={resolve('/about/')} class="block hover:text-blue-200">About</a>
 			</div>

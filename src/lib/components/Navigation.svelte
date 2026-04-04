@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { asset, resolve } from '$app/paths';
+	import { asset, base, resolve } from '$app/paths';
 	import { page } from '$app/state';
 
 	let mobileMenuOpen = $state(false);
@@ -9,7 +9,7 @@
 		{ path: '/about/', label: 'About' },
 		{ path: '/donate/', label: 'Donate' },
 		{ path: '/contact/', label: 'Contact' },
-		{ path: '/mbs/', label: 'Bible Study' }
+		{ path: '/study/', label: 'Bible Study' }
 	] as const;
 
 	type NavLinkPath = (typeof navLinks)[number]['path'];
@@ -27,6 +27,10 @@
 		}
 
 		return currentRouteId === normalizedPath || currentRouteId.startsWith(`${normalizedPath}/`);
+	}
+
+	function navHref(path: NavLinkPath) {
+		return path === '/' ? `${base}/` : `${base}${path}`;
 	}
 
 	function closeMobileMenu() {
@@ -48,7 +52,7 @@
 		<nav class="hidden items-center gap-0.5 lg:flex">
 			{#each navLinks as link (link.path)}
 				<a
-					href={resolve(link.path)}
+					href={navHref(link.path)}
 					class={`rounded-lg px-2.5 py-1.5 text-[0.95rem] font-semibold transition ${
 						isActive(link.path)
 							? 'bg-blue-50 text-blue-800'
@@ -79,7 +83,7 @@
 			<nav class="flex flex-col gap-1">
 				{#each navLinks as link (link.path)}
 					<a
-						href={resolve(link.path)}
+						href={navHref(link.path)}
 						onclick={closeMobileMenu}
 						class={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
 							isActive(link.path)

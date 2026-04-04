@@ -34,7 +34,7 @@
 			"title": "Share a Prayer Request",
 			"description": "If you would like us to pray with you or for someone you care about, please send your request here.",
 			"subject": "BCOC Webpage Prayer Request",
-			"icon": "🙏",
+			"icon": "✉️",
 			"submitLabel": "Send Prayer Request"
 		}
 	],
