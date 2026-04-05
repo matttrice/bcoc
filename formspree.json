@@ -6,7 +6,6 @@
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "text" },
         "message": { "type": "text" }
       },
       "actions": [
@@ -40,7 +39,6 @@
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "text" },
         "message": { "type": "text" }
       },
       "actions": [
@@ -56,7 +54,6 @@
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "text" },
         "message": { "type": "text" }
       },
       "actions": [

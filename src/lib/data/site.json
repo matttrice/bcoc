@@ -5,7 +5,6 @@
 	"description": "A welcoming congregation in Berthoud, Colorado.",
 	"phone": "970-699-9500",
 	"email": "berthoudcoc@gmail.com",
-	"emailSecondary": "berthoudcoc@gmail.com",
 	"physicalAddress": {
 		"street": "730 6th St",
 		"city": "Berthoud",
@@ -34,12 +33,6 @@
 			"name": "Midweek Bible Study",
 			"time": "7:00 PM",
 			"description": "Encouraging study and fellowship in God's word"
-		},
-		{
-			"day": "By Request",
-			"name": "Personal Bible Study",
-			"time": "Flexible",
-			"description": "Meet with a teacher at a time and place that works for you"
 		}
 	],
 	"links": {

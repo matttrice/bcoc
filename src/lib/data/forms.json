@@ -6,6 +6,7 @@
 			"title": "Request a Bible Study",
 			"description": "Interested in studying the Bible? We'd love to meet with you for a personal or group Bible study at a time and place that works for you.",
 			"subject": "BCOC: Bible Study Request",
+			"fields": ["name", "email", "phone", "message"],
 			"icon": "📖",
 			"submitLabel": "Request Bible Study"
 		},
@@ -15,6 +16,7 @@
 			"title": "Request a Personal Visit",
 			"description": "We'd be happy to visit with you. Whether you have questions about faith, need encouragement, or just want to connect, we're here for you.",
 			"subject": "BCOC: Personal Visit Request",
+			"fields": ["name", "email", "phone", "address", "message"],
 			"icon": "🤝",
 			"submitLabel": "Request a Visit"
 		},
@@ -24,6 +26,7 @@
 			"title": "Request More Information",
 			"description": "Have questions about our church, services, or beliefs? Fill out this form and we'll get back to you promptly.",
 			"subject": "BCOC: More Information Request",
+			"fields": ["name", "email", "phone", "message"],
 			"icon": "ℹ️",
 			"submitLabel": "Send Inquiry"
 		},
@@ -33,6 +36,7 @@
 			"title": "Share a Prayer Request",
 			"description": "If you would like us to pray with you or for someone you care about, please send your request here.",
 			"subject": "BCOC: Prayer Request",
+			"fields": ["name", "email", "phone", "message"],
 			"icon": "✉️",
 			"submitLabel": "Send Prayer Request"
 		}
