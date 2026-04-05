@@ -58,7 +58,7 @@
 
 	<section class="mx-auto mt-14 w-full max-w-6xl">
 		<h2 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">Get Connected</h2>
-		<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+		<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 			<article class="panel p-5">
 				<h3 class="text-xl font-semibold text-slate-900">Bible Study</h3>
 				<p class="mt-2 text-sm text-slate-700">Request a guided Bible study with a teacher who can help answer your questions.</p>
@@ -73,11 +73,6 @@
 				<h3 class="text-xl font-semibold text-slate-900">Learn More</h3>
 				<p class="mt-2 text-sm text-slate-700">Ask questions about our beliefs, worship, and opportunities to grow in faith.</p>
 				<a href={resolve('/contact/#more-info')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Open Info Form</a>
-			</article>
-			<article class="panel p-5">
-				<h3 class="text-xl font-semibold text-slate-900">Master Bible Study</h3>
-				<p class="mt-2 text-sm text-slate-700">Explore our guided MBS approach and connect with a teacher before starting.</p>
-				<a href={resolve('/mbs/')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Visit MBS Page</a>
 			</article>
 		</div>
 	</section>
