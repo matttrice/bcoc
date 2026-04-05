@@ -26,7 +26,7 @@
 			</p>
 			<div class="mt-6 flex flex-wrap gap-3">
 				<a href={resolve('/contact/#bible-study')} class="primary-button">Study Request</a>
-				<a href={site.links.mbs} target="_blank" rel="noopener noreferrer" class="secondary-button">Preview Course at masterbiblestudy.com</a>
+				<a href={site.links.mbs} target="_blank" rel="noopener noreferrer" class="secondary-button">Preview the course at masterbiblestudy.com</a>
 			</div>
 		</section>
 
@@ -41,7 +41,8 @@
 				Because concepts introduced later in the study are strongly dependent upon foundational principles,
 				it is essential that those participating commit to attending all sessions for maximum benefit.
 			</p>
-			<ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+			<h3 class="mt-4 text-sm font-semibold text-slate-900">Core Study Principles</h3>
+			<ul class="mt-2 list-disc space-y-2 pl-6 text-slate-700">
 				<li>The Bible is the perfect word of God, authored by God through the hands of men.</li>
 				<li>Interpretation is approached internally, using the Bible's own definitions across its books.</li>
 				<li>The study provides sound doctrine and reason for claiming which teachings are true and false.</li>
@@ -51,7 +52,7 @@
 		<section class="panel p-6 sm:p-8">
 			<h2 class="text-2xl font-semibold text-slate-900">Curriculum Overview</h2>
 			<p class="mt-4 text-slate-700">
-				The series is developed to lay foundations first and then build a big picture of God's word Bible and objective truth is teaches.
+				The series is developed to lay a foundation of biblical principles first, then expand to apply those principles to patterns that reveal God's word and intentions for humanity.
 			</p>
 
 			<div class="mt-6 grid gap-6 md:grid-cols-2">
@@ -101,17 +102,20 @@
 				indisputable and fundamental patterns and principles designed throughout the pages of the Bible.
 				Then the mystery of the gospel can be understood with clarity.
 			</p>
-			<p class="mt-4 text-slate-700">
-			<a
-					href="https://www.biblegateway.com/passage/?search=Ephesians%206%3A19&version=NASB"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="external-link"
-				>
-				Ephesians 6:19:
-				</a>
-			"pray in my behalf, that speech may be given to me in the opening of my mouth, to make known with boldness the <strong>mystery of the gospel</strong>"
-			</p>
+			<blockquote class="mt-4 rounded-xl border-l-4 border-blue-300 bg-blue-50 px-5 py-4 text-slate-800">
+				<p class="font-semibold">
+					<a
+						href="https://www.biblegateway.com/passage/?search=Ephesians%206%3A19&version=NASB"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Ephesians 6:19</a
+					>
+				</p>
+				<p class="mt-2">
+					"pray in my behalf, that speech may be given to me in the opening of my mouth, to make known
+					with boldness the <strong>mystery of the gospel</strong>"
+				</p>
+			</blockquote>
 			<a href={resolve('/contact/#bible-study')} class="primary-button mt-4">
 				Request to begin the Full Course
 			</a>

@@ -19,7 +19,6 @@
 
 		<section class="panel p-6 sm:p-8">
 			<h2 class="text-2xl font-semibold text-slate-900">Our Mission</h2>
-			<p class="mt-4 text-slate-700">We exist to:</p>
 			<ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700">
 				<li><strong>Worship God</strong> in spirit and in truth.</li>
 				<li><strong>Study His Word</strong> together and grow in faith.</li>
@@ -36,7 +35,7 @@
 					href="https://www.biblegateway.com/passage/?search=Matthew%2016%3A18&version=NASB"
 					target="_blank"
 					rel="noopener noreferrer"
-					>(Matthew 16:18)</a
+					>Matthew 16:18</a
 				>. We follow the Bible as our sole guide for salvation, faith, and practice.
 			</p>
 
