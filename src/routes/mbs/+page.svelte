@@ -94,13 +94,17 @@
 		<section class="panel p-6 sm:p-8">
 			<h2 class="text-2xl font-semibold text-slate-900">Why People Request This Study</h2>
 			<p class="mt-4 text-slate-700">
-				With thousands of religious denominations existing today, how does anyone determine which, if any,
-				teach the truth? How can people read the same Bible yet arrive at different conclusions?
+				With thousands of religious denominations existing today, how can anyone determine which, if any,
+				teach the truth? How can people read the same Bible and yet arrive at different conclusions?
+				With so many competing answers, it can seem as though God is the author of confusion and that all
+				hope is lost. In response to these questions, the Master Bible Study curriculum teaches strictly within
+				the framework of the Bible and provides sound doctrine and clear reasoning for identifying which
+				teachings are true and which are false.
 			</p>
 			<p class="mt-4 text-slate-700">
-				This route to avoiding confusion and supposed biblical contradiction starts with recognizing
-				indisputable and fundamental patterns and principles designed throughout the pages of the Bible.
-				Then the mystery of the gospel can be understood with clarity.
+				This path to avoiding confusion and supposed biblical contradiction begins by recognizing
+				indisputable, fundamental patterns and principles woven throughout the pages of the Bible.
+				From there, the mystery of the gospel can be understood with clarity.
 			</p>
 			<blockquote class="mt-4 rounded-xl border-l-4 border-blue-300 bg-blue-50 px-5 py-4 text-slate-800">
 				<p class="font-semibold">
