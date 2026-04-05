@@ -54,7 +54,7 @@
 				</article>
 			{/each}
 			<article class="panel p-5">
-				<h3 class="text-xl font-semibold text-slate-900">Bible Study</h3>
+				<h3 class="text-xl font-semibold text-slate-900">Request a Bible Study</h3>
 				<p class="mt-2 text-sm text-slate-700">Request a guided Bible study with a teacher who can help answer your questions.</p>
 				<a href={resolve('/contact/#bible-study')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Open Bible Study Form</a>
 			</article>

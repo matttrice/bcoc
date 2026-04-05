@@ -15,10 +15,7 @@
 			<p class="mt-4 text-lg text-slate-700">
 				We are a welcoming community of believers located in Berthoud, Colorado.
 			</p>
-		</section>
-
-		<section class="panel p-6 sm:p-8">
-			<h2 class="text-2xl font-semibold text-slate-900">Our Mission</h2>
+		<h2 class="mt-8 text-2xl font-semibold text-slate-900">Our Mission</h2>
 			<ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700">
 				<li><strong>Worship God</strong> in spirit and in truth.</li>
 				<li><strong>Study His Word</strong> together and grow in faith.</li>
@@ -77,17 +74,9 @@
 				<li><strong>The Lord's Supper</strong> observed every Sunday.</li>
 				<li><strong>No pressure</strong>. Come as you are.</li>
 			</ul>
-		</section>
-
-		<section class="panel p-6 sm:p-8">
-			<h2 class="text-2xl font-semibold text-slate-900">Our Community</h2>
-			<p class="mt-4 text-slate-700">
-				Berthoud is a wonderful small town in Northern Colorado with stunning mountain views and easy
-				access to the Front Range.
-			</p>
 			<p class="mt-4 text-slate-700">We would love for you to visit us and see for yourself what we are all about.</p>
 			<div class="mt-6">
-				<a href={resolve('/contact/')} class="primary-button">Contact Us</a>
+				<a href={resolve('/contact/')} class="primary-button">Contact Us</a> or visit us at <a href={site.links.googleMaps} target="_blank" rel="noopener noreferrer" class="underline decoration-2 underline-offset-2 hover:text-blue-900">{site.physicalAddress.street}, {site.physicalAddress.city}, {site.physicalAddress.state}</a>
 			</div>
 		</section>
 	</div>
