@@ -7,9 +7,8 @@
 	const navLinks = [
 		{ path: '/', label: 'Home' },
 		{ path: '/about/', label: 'About' },
-		{ path: '/donate/', label: 'Donate' },
-		{ path: '/contact/', label: 'Contact' },
-		{ path: '/study/', label: 'Bible Study' }
+		{ path: '/study/', label: 'Bible Study' },
+		{ path: '/contact/', label: 'Contact' }
 	] as const;
 
 	type NavLinkPath = (typeof navLinks)[number]['path'];

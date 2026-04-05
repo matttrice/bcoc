@@ -53,17 +53,17 @@
 					<p class="mt-2 text-sm text-slate-600">{service.description}</p>
 				</article>
 			{/each}
+			<article class="panel p-5">
+				<h3 class="text-xl font-semibold text-slate-900">Bible Study</h3>
+				<p class="mt-2 text-sm text-slate-700">Request a guided Bible study with a teacher who can help answer your questions.</p>
+				<a href={resolve('/contact/#bible-study')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Open Bible Study Form</a>
+			</article>
 		</div>
 	</section>
 
 	<section class="mx-auto mt-14 w-full max-w-6xl">
 		<h2 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">Get Connected</h2>
 		<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-			<article class="panel p-5">
-				<h3 class="text-xl font-semibold text-slate-900">Bible Study</h3>
-				<p class="mt-2 text-sm text-slate-700">Request a guided Bible study with a teacher who can help answer your questions.</p>
-				<a href={resolve('/contact/#bible-study')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Open Bible Study Form</a>
-			</article>
 			<article class="panel p-5">
 				<h3 class="text-xl font-semibold text-slate-900">Personal Visit</h3>
 				<p class="mt-2 text-sm text-slate-700">Let us know if you would like a visit and encouragement from our church family.</p>
@@ -73,6 +73,11 @@
 				<h3 class="text-xl font-semibold text-slate-900">Learn More</h3>
 				<p class="mt-2 text-sm text-slate-700">Ask questions about our beliefs, worship, and opportunities to grow in faith.</p>
 				<a href={resolve('/contact/#more-info')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Open Info Form</a>
+			</article>
+			<article class="panel p-5">
+				<h3 class="text-xl font-semibold text-slate-900">Donate</h3>
+				<p class="mt-2 text-sm text-slate-700">Support our congregation and mission through secure online giving.</p>
+				<a href={resolve('/donate/')} class="mt-4 inline-flex text-sm font-semibold text-blue-700 underline decoration-2 underline-offset-2 hover:text-blue-900">Visit Donate Page</a>
 			</article>
 		</div>
 	</section>
