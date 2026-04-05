@@ -11,7 +11,7 @@
 
 	interface FormConfig {
 		id: string;
-		formId: string;
+		endpoint: string;
 		title: string;
 		subject: string;
 		submitLabel: string;
@@ -24,17 +24,17 @@
 	let errorMessage = $state('');
 
 	const allFields = formsData.fields as FieldConfig[];
-	const endpoint = $derived(`${formsData.formspreeEndpoint}/${form.formId}`);
+	const endpoint = $derived(form.endpoint.trim());
 	const activeFields = $derived(
 		form.fields?.length ? allFields.filter((field) => form.fields?.includes(field.name)) : allFields
 	);
-	const isConfigured = $derived(!form.formId.startsWith('YOUR_FORM_ID'));
+	const isConfigured = $derived(Boolean(endpoint));
 
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
 
 		if (!isConfigured) {
-			errorMessage = 'This form is not configured yet. Add your Formspree ID in src/lib/data/forms.json.';
+			errorMessage = 'This form is not configured yet. Add a form endpoint in src/lib/data/forms.json.';
 			status = 'error';
 			return;
 		}
@@ -73,7 +73,7 @@
 {:else}
 	{#if !isConfigured}
 		<div class="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-			Form is in setup mode. Replace <strong>YOUR_FORM_ID</strong> in forms configuration to activate submission.
+			Form is in setup mode. Add an endpoint in forms configuration to activate submission.
 		</div>
 	{/if}
 

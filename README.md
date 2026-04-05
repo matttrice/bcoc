@@ -31,5 +31,5 @@ This project is configured as a static SvelteKit site using `@sveltejs/adapter-s
 Forms post directly to Formspree from the client.
 
 1. Create forms in Formspree
-2. Replace `YOUR_FORM_ID_*` values in `src/lib/data/forms.json`
+2. In `src/lib/data/forms.json`, set each form `endpoint` to the full Formspree endpoint URL
 3. Build and deploy

@@ -1,13 +1,13 @@
 {
   "forms": {
     "bible-study": {
-      "name": "Request a Bible Study",
+      "name": "BCOC: Bible Study Request",
       "fields": {
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "textarea" },
-        "message": { "type": "textarea" }
+        "address": { "type": "text" },
+        "message": { "type": "text" }
       },
       "actions": [
         {
@@ -18,13 +18,13 @@
     },
 
     "personal-visit": {
-      "name": "Request a Personal Visit",
+      "name": "BCOC: Personal Visit Request",
       "fields": {
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "textarea" },
-        "message": { "type": "textarea" }
+        "address": { "type": "text" },
+        "message": { "type": "text" }
       },
       "actions": [
         {
@@ -35,13 +35,29 @@
     },
 
     "more-info": {
-      "name": "Request More Information",
+      "name": "BCOC: More Information Request",
       "fields": {
         "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
         "phone": { "type": "text" },
-        "address": { "type": "textarea" },
-        "message": { "type": "textarea" }
+        "address": { "type": "text" },
+        "message": { "type": "text" }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "berthoudcoc@gmail.com"
+        }
+      ]
+    },
+    "prayer-request": {
+      "name": "BCOC: Prayer Request",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "phone": { "type": "text" },
+        "address": { "type": "text" },
+        "message": { "type": "text" }
       },
       "actions": [
         {

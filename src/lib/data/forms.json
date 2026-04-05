@@ -1,39 +1,38 @@
 {
-	"formspreeEndpoint": "https://formspree.io/f",
 	"forms": [
 		{
 			"id": "bible-study",
-			"formId": "YOUR_FORM_ID_1",
+			"endpoint": "https://formspree.io/p/2965764653872839810/f/bible-study",
 			"title": "Request a Bible Study",
 			"description": "Interested in studying the Bible? We'd love to meet with you for a personal or group Bible study at a time and place that works for you.",
-			"subject": "BCOC Webpage Bible Study Request",
+			"subject": "BCOC: Bible Study Request",
 			"icon": "📖",
 			"submitLabel": "Request Bible Study"
 		},
 		{
 			"id": "personal-visit",
-			"formId": "YOUR_FORM_ID_2",
+			"endpoint": "https://formspree.io/p/2965764653872839810/f/personal-visit",
 			"title": "Request a Personal Visit",
 			"description": "We'd be happy to visit with you. Whether you have questions about faith, need encouragement, or just want to connect, we're here for you.",
-			"subject": "BCOC Web Page Personal Visit Request",
+			"subject": "BCOC: Personal Visit Request",
 			"icon": "🤝",
 			"submitLabel": "Request a Visit"
 		},
 		{
 			"id": "more-info",
-			"formId": "YOUR_FORM_ID_3",
+			"endpoint": "https://formspree.io/p/2965764653872839810/f/more-info",
 			"title": "Request More Information",
 			"description": "Have questions about our church, services, or beliefs? Fill out this form and we'll get back to you promptly.",
-			"subject": "BCOC Webpage More Information Request",
+			"subject": "BCOC: More Information Request",
 			"icon": "ℹ️",
 			"submitLabel": "Send Inquiry"
 		},
 		{
 			"id": "prayer-request",
-			"formId": "YOUR_FORM_ID_4",
+			"endpoint": "https://formspree.io/p/2965764653872839810/f/prayer-request",
 			"title": "Share a Prayer Request",
 			"description": "If you would like us to pray with you or for someone you care about, please send your request here.",
-			"subject": "BCOC Webpage Prayer Request",
+			"subject": "BCOC: Prayer Request",
 			"icon": "✉️",
 			"submitLabel": "Send Prayer Request"
 		}
